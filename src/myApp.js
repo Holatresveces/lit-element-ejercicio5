@@ -59,6 +59,8 @@ class MyApp extends LitElement {
         this.list = data.results;
       })
       .catch((error) => {
+        // Actualmente si falla la solicitud, sólo se asigna un array vacio a list.
+        // Probablemente lo mejor sea tener otro componente encargado de mostrar un mensaje de error.
         this.loading = false;
         this.list = [];
       });
